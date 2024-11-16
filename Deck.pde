@@ -42,6 +42,18 @@ public class deck
     return deck.get(a).getCardImage();
   }
   
+  public void displayCard(int i, char c, float x, float y)
+  {
+    if(c == 'u')
+    {
+      image(loadImage(deck.get(i).getCardImage()), x, y, deck.get(i).getWidth(), deck.get(i).getHeight());
+    }
+    else if(c == 'd')
+    {
+      image(loadImage(deck.get(i).getBackSide()), x, y,  deck.get(i).getWidth(), deck.get(i).getHeight());
+    }
+  }
+  
   public void displayDeck()
   {
     float cardX = globals.width/16;

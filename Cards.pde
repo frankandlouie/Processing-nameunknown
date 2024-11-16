@@ -7,8 +7,10 @@ public class Card
   private String backSide = "backSide.png";
   private String currentCardImage;
   
-  private int cardWidth = 100;
-  private int cardHeight = 150;
+  private float cardWidth = globals.cardW;
+  private float cardHeight = globals.cardH;
+  private float cardX;
+  private float cardY;
   
   public Card(char s, int r, String cI)
   {
@@ -16,6 +18,16 @@ public class Card
     rank = r;
     cardImage = cI;
     currentCardImage = cI;
+  }
+  
+  public float getWidth()
+  {
+    return cardWidth;
+  }
+  
+  public float getHeight()
+  {
+    return cardHeight;
   }
   
   public char getSuit()
